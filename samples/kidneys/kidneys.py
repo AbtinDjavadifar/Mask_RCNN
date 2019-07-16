@@ -86,6 +86,12 @@ class KidneysConfig(Config):
     # Number of classes (including background)
     NUM_CLASSES = 1 + 2  # background + kidney + tumor
 
+    # Use a small epoch since the data is simple
+    STEPS_PER_EPOCH = 100
+
+    # use small validation steps since the epoch is small
+    VALIDATION_STEPS = 5
+
 
 ############################################################
 #  Dataset
